@@ -1,11 +1,13 @@
+use nhn_academy_27;
+
 -- 1. 기존 테이블 삭제
-drop table resident;
-drop table birth_death_report_resident;
-drop table family_relationship;
-drop table household;
-drop table household_movement_address;
-drop table household_composition_resident;
-drop table certificate_issue;
+# drop table resident;
+# drop table birth_death_report_resident;
+# drop table family_relationship;
+# drop table household;
+# drop table household_movement_address;
+# drop table household_composition_resident;
+# drop table certificate_issue;
 
 
 -- 2. 테이블 생성
