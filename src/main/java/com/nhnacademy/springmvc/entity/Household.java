@@ -4,6 +4,8 @@ import java.time.LocalDate;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
@@ -29,5 +31,9 @@ public class Household {
 
     @Column(name = "current_house_movement_address")
     private String currentHouseMovementAddress;
+
+    @ManyToOne
+    @JoinColumn(name="resident_serial_number")
+    private Resident resident;
 
 }

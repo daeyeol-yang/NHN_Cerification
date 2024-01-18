@@ -7,6 +7,9 @@ import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.MapsId;
 import javax.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -22,6 +25,11 @@ public class BirthDeathReportResident {
 
     @EmbeddedId
     private Pk pk;
+
+    @ManyToOne
+    @MapsId("residentSerialNumber")
+    @JoinColumn(name="resident_serial_number")
+    private Resident resident;
 
 
     @Column(name ="report_resident_serial_number")
