@@ -1,2 +1,4 @@
-package com.nhnacademy.springmvc.entity;public class HouseHoldCompositionResident {
+package com.nhnacademy.springmvc.entity;
+
+public class HouseholdCompositionResident {
 }

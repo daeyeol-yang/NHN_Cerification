@@ -1,2 +1,4 @@
-package com.nhnacademy.springmvc.entity;public class HouseholdMovementAdress {
+package com.nhnacademy.springmvc.entity;
+
+public class HouseholdMovementAdress {
 }

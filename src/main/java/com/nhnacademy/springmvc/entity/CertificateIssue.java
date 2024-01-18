@@ -1,4 +1,4 @@
 package com.nhnacademy.springmvc.entity;
 
-public class FamilyRelationship {
+public class CertificateIssue {
 }
