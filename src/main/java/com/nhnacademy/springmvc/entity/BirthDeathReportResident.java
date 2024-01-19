@@ -32,8 +32,7 @@ public class BirthDeathReportResident {
     private Resident resident;
 
 
-    @Column(name ="report_resident_serial_number")
-    private Long reportResidentSerialNumber;
+
 
     @Column(name = "birth_death_report_date")
     private LocalDateTime birthDeathReportDate;
@@ -61,6 +60,9 @@ public class BirthDeathReportResident {
 
         @Column(name ="birth_death_type_code")
         private String birthDeathTypeCode;
+
+        @Column(name ="report_resident_serial_number")
+        private Long reportResidentSerialNumber;
 
     }
 

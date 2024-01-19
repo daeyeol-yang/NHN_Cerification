@@ -1,13 +1,13 @@
 use nhn_academy_27;
 
 -- 1. 기존 테이블 삭제
-# drop table resident;
-# drop table birth_death_report_resident;
-# drop table family_relationship;
-# drop table household;
-# drop table household_movement_address;
-# drop table household_composition_resident;
-# drop table certificate_issue;
+drop table resident;
+drop table birth_death_report_resident;
+drop table family_relationship;
+drop table household;
+drop table household_movement_address;
+drop table household_composition_resident;
+drop table certificate_issue;
 
 
 -- 2. 테이블 생성
@@ -36,7 +36,7 @@ create table birth_death_report_resident
     death_report_qualifications_code varchar(20) null,
     email_address                    varchar(50) null,
     phone_number                     varchar(20) not null,
-    primary key (resident_serial_number, birth_death_type_code)
+    primary key (resident_serial_number, birth_death_type_code,report_resident_serial_number)
 );
 
 create table family_relationship
