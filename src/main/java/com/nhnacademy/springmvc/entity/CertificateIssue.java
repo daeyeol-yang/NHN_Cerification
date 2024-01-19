@@ -23,8 +23,6 @@ public class CertificateIssue {
     @Column(name = "certificate_confirmation_number")
     private Long certificateConfirmationNumber;
 
-    @Column(name = "resident_serial_number")
-    private Long residentSerialNumber;
 
     @Column(name = "certificate_type_code")
     private String certificateTypeCode;

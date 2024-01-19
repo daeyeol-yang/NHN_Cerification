@@ -33,7 +33,6 @@ public class BirthDeathReportResident {
 
 
 
-
     @Column(name = "birth_death_report_date")
     private LocalDateTime birthDeathReportDate;
 

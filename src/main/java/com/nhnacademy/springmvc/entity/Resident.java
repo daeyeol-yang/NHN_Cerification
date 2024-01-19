@@ -23,7 +23,7 @@ public class Resident {
     private String name;
 
     @Column(name = "resident_registration_number")
-    private String residentRegistraionNumber;
+    private String residentRegistrationNumber;
 
     @Column(name = "gender_code")
     private String genderCode;
@@ -35,7 +35,7 @@ public class Resident {
     private String birthPlaceCode;
 
     @Column(name = "registration_base_address")
-    private String registrationBaseAdress;
+    private String registrationBaseAddress;
 
     @Column(name = "death_date")
     private LocalDateTime deathDate;

@@ -1,14 +1,24 @@
 package com.nhnacademy.springmvc.service;
 
 import com.nhnacademy.springmvc.entity.Resident;
+import com.nhnacademy.springmvc.repository.ResidentRepository;
 import java.time.LocalDateTime;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+@Slf4j
 @Service("residentService")
 public class ResidentServiceImpl implements ResidentService {
+
+    private final ResidentRepository residentRepository;
+
+    public ResidentServiceImpl(ResidentRepository residentRepository) {
+        this.residentRepository = residentRepository;
+    }
     @Override
     public Resident getResident(Long residentSerialNumber) {
-        return null;
+        log.info("getResident실행");
+        return residentRepository.findById(residentSerialNumber).orElse(null);
     }
 
     @Override
