@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>발급목록 삭제</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>발급목록 삭제</h2>
+
+<form action="/deleteIssuedDocument" method="post">
+  <table>
+    <thead>
+    <tr>
+      <th>이름</th>
+      <th>주민등록등본</th>
+      <th>가족관계증명서</th>
+      <th>출생신고서</th>
+      <th>사망신고서</th>
+      <th>발급목록</th>
+      <th>삭제</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- 예시 데이터 -->
+    <tr th:each="person : ${people}">
+      <td th:text="${person.name}"></td>
+      <td th:text="${person.residentRegistration}"></td>
+      <td th:text="${person.familyRelationCertificate}"></td>
+      <td th:text="${person.birthCertificate}"></td>
+      <td th:text="${person.deathCertificate}"></td>
+    </tr>
+    </tbody>
+  </table>
+
+  <br>
+
+  <button type="submit">선택한 항목 삭제</button>
+</form>
+
+</body>
+</html>
+
+
