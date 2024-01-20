@@ -39,7 +39,6 @@ public class ResidentRestController {
 
     @GetMapping
     public Resident getResident(@ModelAttribute("resident") Resident resident){
-        log.info("getResident 실행");
         return resident;}
 
 

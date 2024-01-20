@@ -1,9 +1,13 @@
 package com.nhnacademy.springmvc.service;
 
+import com.nhnacademy.springmvc.domain.ResidentNameOnly;
+import com.nhnacademy.springmvc.domain.ResidentsNameOnly;
 import com.nhnacademy.springmvc.entity.Resident;
 import com.nhnacademy.springmvc.repository.ResidentRepository;
 import java.time.LocalDateTime;
 import java.util.Date;
+import java.util.List;
+import java.util.stream.Collectors;
 import javax.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -48,5 +52,19 @@ public class ResidentServiceImpl implements ResidentService {
     @Override
     public Resident modifyResident(Resident resident) {
         return residentRepository.save(resident);
+    }
+
+
+    @Override
+    public List<ResidentNameOnly> getAllResidentNames() {
+        List<Resident> residents = residentRepository.findAll();
+        return residents.stream()
+                .map(resident -> new ResidentsNameOnly(resident.getName()))
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<Resident> getAllResident() {
+        return residentRepository.findAll();
     }
 }

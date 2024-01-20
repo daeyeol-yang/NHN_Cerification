@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>발급목록 삭제</title>
+  <title>주민 목록</title>
   <style>
     table {
       border-collapse: collapse;
@@ -26,7 +26,7 @@
 </head>
 <body>
 
-<h2>발급목록 삭제</h2>
+<h2>주민 목록</h2>
 
 <form action="/deleteIssuedDocument" method="post">
   <table>
@@ -43,19 +43,19 @@
     </thead>
     <tbody>
     <!-- 예시 데이터 -->
-    <tr th:each="person : ${people}">
-      <td th:text="${person.name}"></td>
-      <td th:text="${person.residentRegistration}"></td>
-      <td th:text="${person.familyRelationCertificate}"></td>
-      <td th:text="${person.birthCertificate}"></td>
-      <td th:text="${person.deathCertificate}"></td>
+    <tr th:each="resident : ${residents}">
+      <td th:text="${resident.name}"></td>
+<!--      <td th:text="${person.residentRegistration}"></td>-->
+<!--      <td th:text="${person.familyRelationCertificate}"></td>-->
+<!--      <td th:text="${person.birthCertificate}"></td>-->
+<!--      <td th:text="${person.deathCertificate}"></td>-->
     </tr>
     </tbody>
   </table>
 
   <br>
 
-  <button type="submit">선택한 항목 삭제</button>
+
 </form>
 
 </body>

@@ -51,3 +51,7 @@ Jsrc/main/java/com/nhnacademy/springmvc/domain/ResidentRegisterRequest.java,7/8
 Nsrc/main/java/com/nhnacademy/springmvc/controller/ResidentsRestController.java,d/0/d0dc44abfbc180f81e2c93b8438bb4a5e7d522b1
 =
 resident.http,9/d/9d9b202ac41aa666fb708c2ad5c9c5b024143dfe
+}
+Msrc/main/java/com/nhnacademy/springmvc/controller/ResidentHomeController.java,9/8/982c3589dec2e77a6472ae8cac3dca249ac3b81a
+^
+.src/main/webapp/WEB-INF/view/ResidentMain.html,9/d/9d21bf64da79b66164250228b158eb328d58662f
