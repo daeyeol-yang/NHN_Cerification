@@ -1,0 +1,80 @@
+GET /residents/2
+Host: localhost:8080
+Content-Type: application/json
+
+###
+
+
+PUT /residents/2
+Host: localhost:8080
+Content-Type: application/json
+
+{
+
+   "name": "양대열",
+
+   "residentRegistrationNumber": "980310-1234567",
+
+   "genderCode": "남",
+
+   "birthDate": "19980310",
+
+   "birthPlaceCode": "자택",
+
+   "registrationBaseAddress": "광주광역시 북구 일곡택지로99번길 36-20",
+
+    "deathDate": "2022-01-19T12:34:56",
+
+   "deathPlaceCode": null,
+
+   "deathPlaceAddress": null
+}
+
+
+###
+POST /residents
+Host: localhost:8080
+Content-Type: application/json
+
+
+{
+
+
+  "name": "양대열",
+
+  "residentRegistrationNumber": "980310-1234567",
+
+  "genderCode": "남",
+
+  "birthDate": "19980310",
+
+  "birthPlaceCode": "자택",
+
+  "registrationBaseAddress": "광주광역시 북구 일곡택지로99번길 36-20",
+
+  "deathDate": "2022-01-19T12:34:56",
+
+  "deathPlaceCode": null,
+
+  "deathPlaceAddress": null
+}
+
+
+###
+
+POST /users HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "id": "nhn",
+  "password": "academy"
+}
+
+###
+
+GET /users/nhn
+Host: localhost:8080
+Content-Type: application/json
+
+

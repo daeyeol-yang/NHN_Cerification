@@ -152,3 +152,5 @@ insert into certificate_issue values(1234567891011121, 4, '가족관계증명서
 insert into certificate_issue values(9876543210987654, 4, '주민등록등본', '20211025');
 
 commit;
+
+

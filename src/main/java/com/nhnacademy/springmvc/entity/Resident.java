@@ -1,8 +1,11 @@
 package com.nhnacademy.springmvc.entity;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -16,6 +19,7 @@ import lombok.Setter;
 public class Resident {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "resident_serial_number")
     private Long residentSerialNumber;
 
@@ -29,7 +33,7 @@ public class Resident {
     private String genderCode;
 
     @Column(name = "birth_date")
-    private LocalDateTime birthDate;
+    private Date birthDate;
 
     @Column(name = "birth_place_code")
     private String birthPlaceCode;
@@ -38,7 +42,7 @@ public class Resident {
     private String registrationBaseAddress;
 
     @Column(name = "death_date")
-    private LocalDateTime deathDate;
+    private Date deathDate;
 
     @Column(name = "death_place_code")
     private String deathPlaceCode;

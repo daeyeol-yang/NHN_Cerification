@@ -3,10 +3,13 @@ package com.nhnacademy.springmvc.service;
 import com.nhnacademy.springmvc.entity.Resident;
 import com.nhnacademy.springmvc.repository.ResidentRepository;
 import java.time.LocalDateTime;
+import java.util.Date;
+import javax.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 @Slf4j
+@Transactional
 @Service("residentService")
 public class ResidentServiceImpl implements ResidentService {
 
@@ -22,15 +25,28 @@ public class ResidentServiceImpl implements ResidentService {
     }
 
     @Override
-    public Resident createResident(Long residentSerialNumber, String name, String residentRegistraionNumber,
-                                   String genderCode, LocalDateTime birthDate, String birthPlaceCode,
-                                   String registrationBaseAdress, LocalDateTime deathDate, String deathPlaceCode,
+    public Resident createResident( String name, String residentRegistrationNumber,
+                                   String genderCode, Date birthDate, String birthPlaceCode,
+                                   String registrationBaseAddress, Date deathDate, String deathPlaceCode,
                                    String deathPlaceAddress) {
-        return null;
+        Resident newResident = new Resident();
+        newResident.setName(name);
+        newResident.setResidentRegistrationNumber(residentRegistrationNumber);
+        newResident.setGenderCode(genderCode);
+        newResident.setBirthDate(birthDate);
+        newResident.setBirthPlaceCode(birthPlaceCode);
+        newResident.setRegistrationBaseAddress(registrationBaseAddress);
+        newResident.setDeathDate(deathDate);
+        newResident.setDeathPlaceCode(deathPlaceCode);
+        newResident.setDeathPlaceAddress(deathPlaceAddress);
+        log.info("residentCreate:{}", newResident);
+
+
+        return residentRepository.save(newResident);
     }
 
     @Override
     public Resident modifyResident(Resident resident) {
-        return null;
+        return residentRepository.save(resident);
     }
 }

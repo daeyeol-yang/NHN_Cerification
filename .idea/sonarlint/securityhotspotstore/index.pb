@@ -7,8 +7,6 @@
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
 u
 Esrc/main/java/com/nhnacademy/springmvc/repository/RepositoryBase.java,e/9/e9735a92d1f45d8fbf421bd2e21484313d0df8c3
-k
-;src/main/java/com/nhnacademy/springmvc/domain/ApiError.java,0/f/0f91ee7f78211629d55446850238d2d056cd21df
 z
 Jsrc/main/java/com/nhnacademy/springmvc/entity/HouseholdMovementAdress.java,8/5/85be0ebe1eb9f306c61edeee1bf593105df45c95
 
@@ -41,5 +39,15 @@ w
 Gsrc/main/java/com/nhnacademy/springmvc/service/ResidentServiceImpl.java,9/0/909f2d7b0493a2e0a0ba29a7cb0539d125faa8db
 }
 Msrc/main/java/com/nhnacademy/springmvc/controller/ResidentRestController.java,3/b/3b4a106ed2fe6ebb4dd38d22070f8b7440294395
-9
-	user.http,2/5/25ff05f6c6e93a521545f401a2b2bd2e065bb10d
+
+Osrc/main/java/com/nhnacademy/springmvc/exception/ValidationFailedException.java,d/5/d5abbb685b30bcb2293398dc4425841907265e03
+m
+=src/main/java/com/nhnacademy/springmvc/WebAppInitializer.java,a/4/a422e6ba9e93a07e4803f2e981138ba92f7de2d0
+x
+Hsrc/main/java/com/nhnacademy/springmvc/domain/ResidentModifyRequest.java,4/7/4740e82ef1aa542212d91868ff6124bb9b0c41b0
+z
+Jsrc/main/java/com/nhnacademy/springmvc/domain/ResidentRegisterRequest.java,7/8/786ee68525d6b948e406c7cd5757ccce4bfa1574
+~
+Nsrc/main/java/com/nhnacademy/springmvc/controller/ResidentsRestController.java,d/0/d0dc44abfbc180f81e2c93b8438bb4a5e7d522b1
+=
+resident.http,9/d/9d9b202ac41aa666fb708c2ad5c9c5b024143dfe
